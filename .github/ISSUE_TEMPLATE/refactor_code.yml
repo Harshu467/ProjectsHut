@@ -1,36 +1,25 @@
-name: 🐞 Bug Report
-description: File a bug report
-title: "Bug: "
-labels: ["🛠 goal: fix", "🚦status: awaiting triage", "💻 aspect: code"]
+name: Refactor Code 🔧
+description: Use this label for code refactoring tasks.
+title: "[Refactor] <write what you want to add>"
+labels: ["🛠 goal: refactor", "🚦status: awaiting triage"]
 body:
-  - type: textarea
-    id: what-happened
+  - type: input
+    id: refactor_input
     attributes:
-      label: What happened?
-      placeholder: Add descriptions
+      label: File Name
+      description: "Enter the file that you want to refactor in the codebase."
+      placeholder: "For example - app/projects/page.tsx"
     validations:
       required: true
   - type: textarea
-    id: screenshots
+    id: refactor_description
     attributes:
-      label: Add screenshots
-      placeholder: Add screenshots
+      label: "Reason for Refactoring the Code"
+      description: "Describe what improvements can be made in the codebase without introducing breaking changes."
     validations:
       required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-        - Brave
-        - Other
   - type: checkboxes
-    id: terms
+    id: refactor_terms
     attributes:
       label: "Record"
       options:
@@ -42,5 +31,7 @@ body:
 
         - label: I agree to follow this project's [Code of Conduct](https://github.com/priyankarpal/ProjectsHut/blob/main/CODE_OF_CONDUCT.md)
           required: true
+
+        
 
         - label: I want to work on this issue

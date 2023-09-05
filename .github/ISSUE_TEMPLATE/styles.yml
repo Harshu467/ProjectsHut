@@ -1,46 +1,43 @@
-name: 🐞 Bug Report
-description: File a bug report
-title: "Bug: "
-labels: ["🛠 goal: fix", "🚦status: awaiting triage", "💻 aspect: code"]
+name: 👯‍♂️ Style Changing Request
+description: Suggest a style design
+title: '[style]: '
+labels: ["✨ goal: improvement","🚦status: awaiting triage","🕹 aspect: interface"]
 body:
-  - type: textarea
-    id: what-happened
+  - type: markdown
     attributes:
-      label: What happened?
+      value: |
+        Thanks for taking the time to fill out this template!
+  - type: textarea
+    id: style-idea
+    attributes:
+      label: What's the style idea?
       placeholder: Add descriptions
+     
     validations:
       required: true
   - type: textarea
     id: screenshots
     attributes:
       label: Add screenshots
+      
       placeholder: Add screenshots
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-        - Brave
-        - Other
+      
   - type: checkboxes
     id: terms
     attributes:
       label: "Record"
+      
       options:
         - label: I have checked the existing [issues](https://github.com/priyankarpal/ProjectsHut/issues)
           required: true
-
+          
         - label: I have read the [Contributing Guidelines](https://github.com/priyankarpal/ProjectsHut/blob/main/contributing.md)
           required: true
 
         - label: I agree to follow this project's [Code of Conduct](https://github.com/priyankarpal/ProjectsHut/blob/main/CODE_OF_CONDUCT.md)
           required: true
 
+        
+
         - label: I want to work on this issue
+       

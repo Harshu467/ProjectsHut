@@ -34,7 +34,7 @@ const Navbar: NextPage = () => {
 
   return (
     <Suspense>
-      <nav className="bg-black top-0 z-10 sticky border-b border-gray-800">
+      <nav className="top-0 z-10 sticky border-b border-gray-800 mx-auto bg-transparent backdrop-blur-sm">
         <div className="flex justify-between md:justify-around p-5 w-full ">
           {/* Logo for project Hut */}
           <div className="item-navbar" id="logo-ph">
@@ -55,25 +55,26 @@ const Navbar: NextPage = () => {
               {navLinks.map((navLink) => (
                 <li key={navLink.path}>
                   {navLink.external ? (
-                    <a
+                    <Link
                       href={navLink.path}
+                      aria-label="desktop navbar link"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={
                         activePath === navLink.path ||
-                        activePath === navLink.path + "/"
+                          activePath === navLink.path + "/"
                           ? "inline-block py-2 px-3 text-center text-primary hover:text-primary rounded-lg"
                           : "inline-block py-2 px-3 text-center text-white hover:text-primary rounded-lg"
                       }
                     >
-                      {navLink.name} 
-                    </a>
+                      {navLink.name}
+                    </Link>
                   ) : (
                     <Link
                       href={navLink.path}
                       className={
                         activePath === navLink.path ||
-                        activePath === navLink.path + "/"
+                          activePath === navLink.path + "/"
                           ? "inline-block py-2 px-3 text-center text-primary hover:text-primary rounded-lg"
                           : "inline-block py-2 px-3 text-center text-white hover:text-primary rounded-lg"
                       }
